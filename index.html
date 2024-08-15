@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autocorrect App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-theme"> <!-- Default theme -->
+    <div class="container">
+        <div class="header">
+            <h1>Autocorrect Text Editor</h1>
+            <div id="settings-icon" class="settings-icon">&#9881;</div> <!-- Settings Icon -->
+        </div>
+        <textarea id="editor" placeholder="Type your text here..."></textarea>
+        <button id="check-btn">
+            <span id="button-text">Check Text</span>
+            <div id="spinner" class="spinner"></div>
+        </button>
+        <h2>Corrected Text</h2>
+        <textarea id="result" readonly></textarea>
+    </div>
+
+    <!-- Modal -->
+    <div id="settings-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Settings</h2>
+            <div>
+                <label for="theme-select-modal">Select Theme:</label>
+                <select id="theme-select-modal">
+                    <option value="light-theme">Light Theme</option>
+                    <option value="dark-theme">Dark Theme</option>
+                    <option value="high-contrast-theme">High Contrast Theme</option>
+                    <option value="funny-theme">Funny Theme</option> <!-- Added Funny Theme option -->
+                </select>
+            </div>
+            <div>
+                <label for="num-reruns">Number of Reruns:</label>
+                <input type="number" id="num-reruns" min="1" max="5" value="1">
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,287 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+button {
+    padding: 10px 30px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Spinner */
+#spinner {
+    display: none;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-left: 3px solid #fff;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Light theme */
+.light-theme {
+    background-color: #f4f4f4;
+    color: #000;
+}
+
+.light-theme .container {
+    background-color: #fff;
+}
+
+.light-theme textarea {
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+.light-theme button {
+    background-color: #007bff;
+}
+
+.light-theme button:hover {
+    background-color: #0056b3;
+}
+
+/* Dark theme */
+.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-theme .container {
+    background-color: #444;
+}
+
+.dark-theme textarea {
+    background-color: #555;
+    border-color: #666;
+    color: #fff;
+}
+
+.dark-theme button {
+    background-color: #007bff;
+}
+
+.dark-theme button:hover {
+    background-color: #0056b3;
+}
+
+/* High-contrast theme */
+.high-contrast-theme {
+    background-color: #000;
+    color: #fff;
+}
+
+.high-contrast-theme .container {
+    background-color: #111;
+}
+
+.high-contrast-theme textarea {
+    background-color: #222;
+    border-color: #fff;
+    color: #fff;
+}
+
+.high-contrast-theme button {
+    background-color: #f00;
+    color: #fff;
+}
+
+.high-contrast-theme button:hover {
+    background-color: #c00;
+    color: #fff;
+}
+
+/* Header with settings icon */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Settings icon */
+.settings-icon {
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.3s;
+}
+
+.settings-icon:hover {
+    color: #007bff;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    transition: opacity 0.3s ease;
+}
+
+.modal-content {
+    background-color: var(--modal-background, #fefefe);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 4px;
+    transition: background-color 0.1s, color 0.1s;
+}
+
+/* Funny Theme */
+body.funny-theme {
+    background: linear-gradient(rgba(255,0,0,1) 0%, rgba(255,154,0,1) 10%, rgba(208,222,33,1) 20%, rgba(79,220,74,1) 30%, rgba(63,218,216,1) 40%, rgba(47,201,226,1) 50%, rgba(28,127,238,1) 60%, rgba(95,21,242,1) 70%, rgba(186,12,248,1) 80%, rgba(251,7,217,1) 90%, rgba(255,0,0,1) 100%)
+    0 0/100% 200%;
+    background-size: 800% 800%;
+    animation: gradientAnimation 2s linear infinite;
+    color: #ff00ff;
+}
+
+.funny-theme .container {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px dashed #000;
+    animation: bounce 2s infinite;
+}
+
+.funny-theme .header {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #ff00ff;
+}
+
+.funny-theme textarea {
+    background-color: #ffeeaa;
+    border-color: #ff77ff;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #8800aa;
+    animation: wiggle 1.5s ease-in-out infinite;
+}
+
+.funny-theme button {
+    background-color: #ff69b4;
+    color: #fff;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    animation: pulse 1s infinite;
+    box-shadow: 0 0 10px #ff00ff;
+}
+
+.funny-theme button:hover {
+    background-color: #ff1493;
+    box-shadow: 0 0 20px #ff00ff;
+}
+
+.funny-theme .settings-icon {
+    color: #ff4500;
+    animation: spinIcon 3s linear infinite;
+}
+
+.funny-theme .modal {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.funny-theme .modal-content {
+    background-color: #ffffe0;
+    color: #ff4500;
+    border: 3px solid #ff1493;
+    animation: rotateModal 5s linear infinite;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Animation for Gradient Background */
+@keyframes gradientAnimation {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 -200%; }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-30px); }
+    60% { transform: translateY(-15px); }
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+@keyframes spinIcon {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes rotateModal {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
